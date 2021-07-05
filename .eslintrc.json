@@ -31,5 +31,11 @@
                 ]
             }
         ],
+        "max-len": ["error",
+            {
+                "code": 300,
+                "ignoreStrings": true,
+                "ignoreTemplateLiterals": true
+            }]
     }
 }
