@@ -1,0 +1,12 @@
+{
+  "name": "boilerplate-nodejs-typescript-express",
+  "version": "1.0.0",
+  "description": "Code boilerplate using nodejs, typescript and express, to start new projects.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Gabriel de Amorim Machado",
+  "license": "ISC"
+}
