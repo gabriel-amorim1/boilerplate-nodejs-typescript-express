@@ -1,7 +1,7 @@
 import { Request, Response } from 'express';
 import { container } from 'tsyringe';
 import { CreateMovieInterface } from '../interfaces/create';
-import { ListMovieInterface } from '../interfaces/list';
+import { MovieRequestGetAllInterface } from '../interfaces/list';
 import CreateMovieService from '../services/create';
 import ListMovieService from '../services/list';
 import { createMovieSchema, listMovieSchema } from '../validators';
@@ -22,7 +22,7 @@ export const list = async (req: Request, res: Response): Promise<Response> => {
     const query = (await listMovieSchema.validate(req.query, {
         stripUnknown: true,
         abortEarly: false,
-    })) as ListMovieInterface;
+    })) as MovieRequestGetAllInterface;
 
     const listMovieService = container.resolve(ListMovieService);
     const moviesListed = await listMovieService.execute(query);

@@ -24,6 +24,7 @@
         "camelcase": "off",
         "import/no-unresolved": 0,
         "no-useless-constructor": "off",
+        "no-restricted-syntax": "off",
         "import/extensions": [
             "error",
             "never",
