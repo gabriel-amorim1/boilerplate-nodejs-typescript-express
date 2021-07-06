@@ -25,6 +25,7 @@
         "import/no-unresolved": 0,
         "no-useless-constructor": "off",
         "no-restricted-syntax": "off",
+        "no-restricted-globals": "off",
         "import/extensions": [
             "error",
             "never",
@@ -47,5 +48,15 @@
                 "ignoreStrings": true,
                 "ignoreTemplateLiterals": true
             }]
-    }
+    },
+    "overrides": [
+        {
+            "files": [
+                "src/modules/**/*.spec.ts"
+            ],
+            "rules": {
+                "@typescript-eslint/no-explicit-any": 0
+            }
+        }
+    ]
 }
