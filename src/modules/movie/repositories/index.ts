@@ -1,6 +1,6 @@
 import { getRepository, Repository } from 'typeorm';
 import { MovieEntity } from '../entities/movie';
-import { CreateMovieInterface } from '../interfaces/movieInterface';
+import { CreateMovieInterface } from '../interfaces/create';
 
 export default class MovieRepository {
     private ormRepository: Repository<MovieEntity>;

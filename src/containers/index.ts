@@ -1,7 +1,6 @@
 import { container } from 'tsyringe';
-import MovieRepository from '../modules/movie/repositories/movieRepository';
-import MovieService from '../modules/movie/services/movieService';
+import MovieRepository from '../modules/movie/repositories';
+import CreateMovieService from '../modules/movie/services/create';
 
 container.registerSingleton<MovieRepository>('MovieRepository', MovieRepository);
-
-container.registerSingleton<MovieService>('MovieService', MovieService);
+container.registerSingleton<CreateMovieService>('MovieService', CreateMovieService);

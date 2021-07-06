@@ -6,7 +6,8 @@
     "scripts": {
         "dev": "ts-node-dev --transpile-only --ignore-watch node_modules src/server.ts",
         "eslint-fix": "eslint --fix src --ext .ts",
-        "typeorm": "ts-node-dev ./node_modules/typeorm/cli.js"
+        "typeorm": "ts-node-dev ./node_modules/typeorm/cli.js",
+        "build": "tsc"
     },
     "keywords": [],
     "author": "Gabriel de Amorim Machado",
