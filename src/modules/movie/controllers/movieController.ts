@@ -5,17 +5,13 @@ import MovieService from '../services/movieService';
 import { createMovieSchema } from '../validators';
 
 export const create = async (req: Request, res: Response): Promise<Response> => {
-    try {
-        const body = (await createMovieSchema.validate(req.body, {
-            stripUnknown: true,
-            abortEarly: false,
-        })) as CreateMovieInterface;
+    const body = (await createMovieSchema.validate(req.body, {
+        stripUnknown: true,
+        abortEarly: false,
+    })) as CreateMovieInterface;
 
-        const movieService = container.resolve(MovieService);
-        const movieCreated = await movieService.create(body);
+    const movieService = container.resolve(MovieService);
+    const movieCreated = await movieService.create(body);
 
-        return res.status(201).json(movieCreated);
-    } catch (error) {
-        return res.status(400).json({ errors: error.errors });
-    }
+    return res.status(201).json(movieCreated);
 };

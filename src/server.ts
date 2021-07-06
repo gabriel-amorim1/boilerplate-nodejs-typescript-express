@@ -1,17 +1,18 @@
 import 'reflect-metadata';
+import app from './app';
 
-require('express-async-errors');
-
-import bodyParser from 'body-parser';
-import express from 'express';
 import './database';
-import routes from './routes';
 import './containers';
+import dotenv from 'dotenv';
 
-const app = express();
+dotenv.config();
 
-app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({ extended: false }));
-app.use(routes);
+const PORT = process.env.PORT || 3000;
 
-app.listen(3333, () => console.log('Server is running'));
+async function startServer() {
+    app.listen(PORT, () => {
+        console.log(`Service running on port ${PORT}`);
+    });
+}
+
+startServer();
