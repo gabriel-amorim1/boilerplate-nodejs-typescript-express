@@ -1,4 +1,4 @@
-export interface CreateMovie {
+export interface CreateMovieInterface {
     director: string;
     name: string;
     genre: string;

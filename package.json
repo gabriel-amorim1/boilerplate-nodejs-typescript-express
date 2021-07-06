@@ -13,13 +13,16 @@
     "license": "ISC",
     "dependencies": {
         "express": "^4.17.1",
+        "express-async-errors": "^3.1.1",
         "reflect-metadata": "^0.1.13",
         "sqlite3": "^5.0.2",
         "tsyringe": "^4.5.0",
-        "typeorm": "^0.2.34"
+        "typeorm": "^0.2.34",
+        "yup": "^0.32.9"
     },
     "devDependencies": {
         "@types/express": "^4.17.12",
+        "@types/yup": "^0.29.12",
         "@typescript-eslint/eslint-plugin": "^4.28.2",
         "@typescript-eslint/parser": "^4.28.2",
         "eslint": "^7.30.0",
