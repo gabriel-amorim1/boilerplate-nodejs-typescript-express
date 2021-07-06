@@ -1,3 +1,4 @@
+/* eslint-disable import/extensions */
 import { Request, Response, Router } from 'express';
 import movieRoutes from './modules/movie/movie.routes';
 

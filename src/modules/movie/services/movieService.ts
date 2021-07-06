@@ -1,6 +1,6 @@
 import { inject, injectable } from 'tsyringe';
-import { MovieEntity } from '../entities/movie.entity';
-import { CreateMovie } from '../interfaces/movieInteface';
+import { MovieEntity } from '../entities/movie';
+import { CreateMovieInterface } from '../interfaces/movieInterface';
 import MovieRepository from '../repositories/movieRepository';
 
 @injectable()
@@ -10,7 +10,7 @@ class MovieService {
         private movieRepository: MovieRepository,
     ) {}
 
-    public async create(data: CreateMovie) {
+    public async create(data: CreateMovieInterface): Promise<MovieEntity> {
         return this.movieRepository.createAndSave(data);
     }
 }

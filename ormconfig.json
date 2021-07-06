@@ -2,7 +2,7 @@
     "type": "sqlite",
     "database": "./src/database/database.sqlite",
     "entities": [
-        "src/modules/*/entities/*.entity.ts"
+        "src/modules/*/entities/*.ts"
     ],
     "migrationsTableName": "migrations",
     "migrations": [

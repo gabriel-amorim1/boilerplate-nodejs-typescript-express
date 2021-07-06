@@ -1,5 +1,7 @@
 import 'reflect-metadata';
+
 require('express-async-errors');
+
 import bodyParser from 'body-parser';
 import express from 'express';
 import './database';

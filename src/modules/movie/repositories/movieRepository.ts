@@ -1,6 +1,6 @@
 import { getRepository, Repository } from 'typeorm';
-import { MovieEntity } from '../entities/movie.entity';
-import { CreateMovie } from '../interfaces/movieInteface';
+import { MovieEntity } from '../entities/movie';
+import { CreateMovieInterface } from '../interfaces/movieInterface';
 
 export default class MovieRepository {
     private ormRepository: Repository<MovieEntity>;
@@ -9,9 +9,7 @@ export default class MovieRepository {
         this.ormRepository = getRepository(MovieEntity);
     }
 
-    public async createAndSave(
-        movie: CreateMovie,
-    ): Promise<MovieEntity> {
+    public async createAndSave(movie: CreateMovieInterface): Promise<MovieEntity> {
         const movieToCreate = this.ormRepository.create(movie);
 
         return this.ormRepository.save(movieToCreate);
